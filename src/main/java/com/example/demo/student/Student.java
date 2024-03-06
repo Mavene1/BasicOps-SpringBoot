@@ -1,22 +1,19 @@
 package com.example.demo.student;
 
-import org.springframework.boot.context.properties.ConfigurationProperties;
-
 import javax.persistence.*;
 import java.time.LocalDate;
 
 @Entity
 @Table
-
 public class Student {
     @Id
     @SequenceGenerator(
-            name="student_sequence",
-            sequenceName="student_sequence",
+            name = "student_sequence",
+            sequenceName = "student_sequence",
             allocationSize = 1
     )
     @GeneratedValue(
-            strategy=GenerationType.SEQUENCE,
+            strategy = GenerationType.SEQUENCE,
             generator = "student_sequence"
     )
     private Long id;
